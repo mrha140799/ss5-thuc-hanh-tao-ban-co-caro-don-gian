@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeGym</title>
+</head>
+<body>
+<h1 id="txtShow"></h1>
+<input type="button" value="Change Value" onclick="changeValue()">
+<script>
+    var txtShow = document.getElementById("txtShow");
+    var htmlStr = '';
+    var arr = [];
+    var arr1 = [];
+        for (let i = 0 ; i< 5 ; i++) {
+            arr[i] = new Array('0','0','0','0','0');
+        }
+        for (let i = 0 ; i < 5 ; i++) {
+            htmlStr += "</br>";
+            for (let j = 0 ; j<5 ; j++) {
+                htmlStr += arr[i][j] + "&nbsp;" + "&nbsp;";
+            }
+        }
+        txtShow.innerHTML = htmlStr;
+        function changeValue() {
+            var psnX = parseInt(prompt("X :"));
+            var psnY = parseInt(prompt("y :"));
+            htmlStr = '';
+            arr[psnX][psnY] = "x";
+            for (let i = 0 ; i < 5 ; i++) {
+                htmlStr += "</br>";
+                for (let j = 0 ; j<5 ; j++) {
+                    htmlStr += arr[i][j] + "&nbsp;" + "&nbsp;";
+                }
+            }
+            txtShow.innerHTML = htmlStr;
+            
+        }
+
+
+</script>
+</body>
+</html>
